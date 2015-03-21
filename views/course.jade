@@ -1,0 +1,38 @@
+extends ./basic3columns.jade
+block left
+  include ./includes/menu.jade
+  
+block content
+  if course
+    h4 #{course.courseid} - #{course.name}
+    h5 Course Contents
+    p= course.contents
+    h5 Study Goals
+    p= course.studygoals
+    h5 Keywords
+    ul
+    each k in keywords
+      li
+        a(href='/keyword/#{k.id}') #{k.name} (#{k.relevance})
+  else
+    h4 Courses
+    table.table.table-striped
+      thead
+        tr
+          th Course ID
+          th Course Name
+      tbody
+        each c in allCourses
+          tr
+            td #{c.courseid}
+            td 
+              a(href='/course/#{c.id}') #{c.name}
+            
+block right
+  if course
+    h4 Wikipedia
+    ul
+      each article in articles
+        li
+          a(href='#{article.url}', target='_blank')= article.title
+

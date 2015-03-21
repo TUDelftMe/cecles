@@ -1,0 +1,24 @@
+extends ./basic2columns.jade
+block left
+  include ./includes/menu.jade
+  
+block content
+  if keyword
+    h4(style='text-transform:capitalize;') Keyword '#{keyword.name}'
+    div.container
+      div.row
+        div.col-md-3
+          h5 Courses
+          ul
+            each course in relevantCourses
+              li
+                a(href='/course/#{course.id}') #{course.courseid} - #{course.name}
+        div.col-md-3
+          h5 Wikipedia
+          ul
+            each article in articles
+              li
+                a(href='#{article.url}', target='_blank')= article.title
+        div.col-md-3
+
+block right

@@ -1,0 +1,16 @@
+extends ./basic3columns.jade
+block left
+  include ./includes/menu.jade
+  
+block content
+  h4 Search Results
+  div
+  if results
+      ul.list-group
+    each r in results
+      a(href='/keyword/#{r.id}')
+        li.list-group-item(style='text-transform:capitalize;') #{r.name}
+      br
+  else
+    h5 No results were found.
+block right

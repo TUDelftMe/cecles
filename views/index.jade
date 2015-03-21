@@ -1,0 +1,29 @@
+extends ./basic2columns.jade
+
+block left
+  include ./includes/menu.jade
+  
+block content
+  h4 Welcome to CECLES, #{user}!
+  p Please pick one of your courses or search for a problem on the left. Bored? Look below for some inspiration! 
+
+  h5 Maybe you like one of these?
+  div.row
+    div.col-md-4
+      h5 Courses
+      ul
+        each a in randCourses
+          li
+            a(href='/course/#{a.id}')= a.name
+    div.col-md-4
+      h5 Keywords
+      ul
+        each a in randKeywords
+          li
+            a(href='/keyword/#{a.id}')= a.name
+    div.col-md-4
+      h5 Wikipedia
+      ul
+        each a in randArticles
+          li
+            a(href='#{a.url}', target='_blank')= a.title
