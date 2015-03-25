@@ -1,10 +1,12 @@
 # System Analysis
+## Use Case analysis
+
 
 ##The keyword pipeline
 This section supports the keyword scheme. A majority of the functionalities in the pipeline will be present at the end of Q3 of 2015. However, for explanational purposes in this document it is assumed that all function are already present. In this pipeline only the relevance of the keywords are taken into account, the search results are set out in another document. 
 
 ********** Document updaten obv nieuwe pipeline ***********
-********* Hier de pipeline ***********
+********* Hier de pipeline (Diagram) ***********
 
 
 
@@ -14,9 +16,8 @@ For the initial CECLES application the course data from the TUDelft API is used.
 
 Because even at the TU spelling errors are quite common, an initial spelling check on all course descriptions and goals is performed.
 
-### Alchemy ?
-Uitleg: wat Alchemy doet
-
+### Alchemy
+Alchemy supports a computer’s ability to understand human language and vision via an SaaS API. It integrates advanced text mining and computer vision functionality into Cecles' data-processing pipeline.
 
 ### Text analysis
 Since Alchemy already does a large part of the analysis, stemming is the action most performed after the term extraction. Stemming is done because after testing several queries, overlap was found between several keywords (not yet in the results). 
