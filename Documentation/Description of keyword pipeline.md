@@ -25,7 +25,7 @@ A part that cannot be examined could be processed with the help of Crowdflower. 
 ## The User
 When the keywords are extracted, scored on their relevance and sorted and filtered by eg. relevance they can be used for generating queries. Whether the right keywords are extracted is among others examined by the users' feedback. 
 
-Relevance feedback is typically used for query expansion during short-term modeling of a user?s immediate information need and for user profiling during long-term modeling of a user?s persistent interests and preferences. Traditionally feedback methods require explicit feedback given by, for example, voting a plus or a minus. Such relevance feedback methods force users to engage in additional activities beyond their normal searching behavior. To limit this 'costs' for the user in the keyword part, CECLES focuses primarily on implicit feedback. In this way in the parts that require explicit feedback most, the effectiveness of explicit techniques will remain well.
+Relevance feedback is typically used for query expansion during short-term modeling of a user's immediate information need and for user profiling during long-term modeling of a user's persistent interests and preferences. Traditionally feedback methods require explicit feedback given by, for example, voting a plus or a minus. Such relevance feedback methods force users to engage in additional activities beyond their normal searching behavior. To limit this 'costs' for the user in the keyword part, CECLES focuses primarily on implicit feedback. In this way in the parts that require explicit feedback most, the effectiveness of explicit techniques will remain well.
 
 With implicit feedback click rates, conversions and bounce rates are used to re-rank the keywords in the score model  (or in the sort and filter step). With explicit feedback the user is asked to assess the keywords on their relevance. 
 Also, when a user thinks a relevant keyword is missing he or she can submit additional keywords.
@@ -34,10 +34,10 @@ Also, when a user thinks a relevant keyword is missing he or she can submit addi
 The implicit user feedback consists a.o. of the click behavior of the student. 
 
 ###Explicit feedback
-Since the user interface has to be as clean as possible.
+Since the user interface has to be as clean as possible, not to burden the student with all kinds of feedback requests, the user will not be asked for feedback in this phase. This is as mentioned in the beginning of this paragraph. Instead of asking the student, an expert's feedback is used namely
 
 
-Stehpan!!
+
 
 
 
@@ -47,6 +47,9 @@ Stehpan!!
 Implicit student /user
 explicit teacher /expert
 
+
+
+Crowdflower? alle woorden tegenover graylist
 
 mate van stemming
 
