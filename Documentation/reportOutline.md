@@ -3,6 +3,9 @@
 * Goals and aim of the system
 * Planning and ideas
 * Diagrams
+	* Usecase
+	* keyword pipeline
+	* result pipeline
 * The system in production
 	*how it works
 	*screenshots
