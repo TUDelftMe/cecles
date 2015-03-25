@@ -38,11 +38,6 @@ Since the user interface has to be as clean as possible, not to burden the stude
 
 
 
-
-
-
-
-
 <!--
 Implicit student /user
 explicit teacher /expert
@@ -58,3 +53,9 @@ Click op keyworda
 Bepalen populariteit categorie
 -->
 
+
+
+## Key concepts
+
+### Relevancy
+Relevancy, as used in our description and diagrams, indicates whether a keyword from a course reflects the contents of the course it has been extracted from. 
