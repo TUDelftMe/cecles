@@ -4,6 +4,9 @@
 * Planning and ideas
 * Diagrams
 * The system in production
+	*how it works
+	*screenshots
+	features
 * Usability
 * IR component
 	* IR search theory?
