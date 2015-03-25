@@ -13,16 +13,11 @@ connection = db.connect();
 
 // Select all courses
 var queryString = 'SELECT * FROM course';
-connection.query(queryString, function(err, rows, fields) {
-    if (err) throw err;
-    
+connection.safe_query(queryString, function(rows, fields) {
     rows.forEach(function(course) {
     	// Remove all current keywords from db
       var removeQueryString = 'DELETE FROM course_keyword WHERE id_course = '+course.id;
-      connection.query(removeQueryString, function(err) {
-      	if (err)
-      		throw err;
-      	else
+      connection.safe_query(removeQueryString, function() {
       		// Call alchemy and save keywords as callback
       		callAlchemyAPITermExtractor(course.contents+" "+course.studygoals, course.id, saveKeywords);
       });
@@ -51,10 +46,7 @@ function saveKeywords(data, id_course) {
 			console.log("Saving keyword '"+keyword.text+"' for course "+id_course+".");
 			
 			var queryString = "SELECT * FROM keyword WHERE name = "+connection.escape(keyword.text);
-			var query = connection.query(queryString, function(err, rows, fields) {
-				if (err)
-					throw err;
-				
+			var query = connection.safe_query(queryString, function(rows, fields) {
 				if (rows.length == 0)
 					saveNewKeywordCourseRelation(keyworddb, id_course, keyword.relevance);
 				else
@@ -71,10 +63,7 @@ function saveKeywords(data, id_course) {
  */
 function saveKeywordCourseRelation(id_keyword, id_course, relevance) {
 	var keywordCourseRelation = {id_keyword: id_keyword, id_course: id_course, relevance: relevance};
-	var query = connection.query('INSERT INTO course_keyword SET ?', keywordCourseRelation, function(err, result) {
-		if (err)
-			console.log(err);
-	});
+	var query = connection.safe_query('INSERT INTO course_keyword SET ?', keywordCourseRelation, function() {});
 }
 
 /**
@@ -84,10 +73,7 @@ function saveKeywordCourseRelation(id_keyword, id_course, relevance) {
  * @param id_course
  */
 function saveNewKeywordCourseRelation(keyword, id_course, relevance) {
-	connection.query('INSERT INTO keyword SET ?', keyword, function(err, result) {
-		if (err)
-			console.log(err);
-		else
+	connection.safe_query('INSERT INTO keyword SET ?', keyword, function(result) {
 			saveKeywordCourseRelation(result.insertId, id_course, relevance);
 	});
 }

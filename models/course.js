@@ -14,38 +14,35 @@ exports.getCourseById = function(courseId, callback) {
 		else
 			callback({});
 	});
-}
+};
 
 exports.getCoursesByIds = function(courseIds, callback) {
-	connection.query('SELECT * FROM course WHERE id IN ('+courseIds.join(',')+')', function(err, rows, fields) {
-		if (err) throw err;  	
+	connection.safe_query('SELECT * FROM course WHERE id IN ('+courseIds.join(',')+')', function(rows, fields) {
 		callback(rows);
 	});
-}
+};
 
 exports.getCoursesByKeywordId = function(keywordId, callback) {
 	Course.getCoursesByKeywordIds([keywordId], function(courses) {
 		callback(courses);
 	});
-}
+};
 
 exports.getCoursesByKeywordIds = function(keywordIds, callback) {
-	connection.query('SELECT DISTINCT c.id, c.*, ck.relevance FROM course_keyword AS ck LEFT JOIN course AS c ON c.id = ck.id_course WHERE ck.id_keyword IN ('+keywordIds.join(',')+')', function(err, rows, fields) {
-		if (err) throw err;  		
+	connection.safe_query('SELECT DISTINCT c.id, c.*, ck.relevance FROM course_keyword AS ck LEFT JOIN course AS c ON c.id = ck.id_course WHERE ck.id_keyword IN ('+keywordIds.join(',')+')', function(rows, fields) {
 		courses = rows;
 		callback(courses);
 	});
-}
+};
 
 exports.getCourses = function(callback) {
-	connection.query('SELECT * FROM course', function(err, rows, fields) {
-		if (err) throw err;  		
+	connection.safe_query('SELECT * FROM course', function(rows, fields) {
 		callback(rows);
 	});
-}
+};
 
 exports.getRandomCourses = function(limit, callback) {
-	connection.query('SELECT * FROM course ORDER BY RAND() LIMIT '+connection.escape(limit), function(err, courses, fields) {
+	connection.safe_query('SELECT * FROM course ORDER BY RAND() LIMIT '+connection.escape(limit), function(courses, fields) {
 		callback(courses);
 	});
-}
+};
