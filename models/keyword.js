@@ -49,7 +49,7 @@ exports.getKeywordsByUserIdCourseId = function (userId, courseId, callback) {
 };
 
 exports.getKeywordsByCourseIds = function (courseIds, callback) {
-  connection.safe_query('SELECT k.*, ck.relevance FROM course_keyword AS ck LEFT JOIN keyword AS k ON k.id = ck.id_keyword WHERE ck.id_course IN (' + courseIds.join(',') + ')', function (rows, fields) {
+  connection.safe_query('SELECT k.*, ck.relevance FROM course_keyword AS ck LEFT JOIN keyword AS k ON k.id = ck.id_keyword WHERE ck.active = 1 AND ck.id_course IN (' + courseIds.join(',') + ')', function (rows, fields) {
     keywords = rows;
     callback(keywords);
   });
@@ -63,6 +63,7 @@ exports.getKeywordsByUserIdCourseIds = function (userId, courseIds, callback) {
   			'AND ruk.id_user = '+connection.escape(userId)+' '+
   		'WHERE ck.id_course IN (' + courseIds.join(',') + ') '+
   			'AND (ruk.id_user != '+connection.escape(userId)+' OR ruk.id_user IS NULL) '+
+  			'AND ck.active = 1 '+
   		'GROUP BY k.id', function (rows, fields) {
     keywords = rows;
     callback(keywords);
@@ -76,8 +77,7 @@ exports.getRandomKeywords = function (limit, callback) {
 };
 
 exports.removeKeywordById = function(id, callback) {
-	connection.safe_query('UPDATE course_keyword SET active = 0 WHERE id_keyword = '+connection.escape(id), function(err, result) {
-		if (err) throw err;
+	connection.safe_query('UPDATE course_keyword SET active = 0 WHERE id_keyword = '+connection.escape(id), function(result) {
 		callback(result);
 	});
 };

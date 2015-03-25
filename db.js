@@ -22,24 +22,20 @@ module.exports = {
           return;
         }
 
-      	console.log(sql_query);
-      	console.log(typeof(callback1));
         if (typeof(callback1) == 'function') {
           connection.query(sql_query, function (err, rows, fields) {
             connection.release();
             if (err) {
-            	console.log(sql_query);
               throw err;
               return;
             }
             callback1(rows, fields);
           });
         }
-        else if (typeof(callback1) == 'object') {
+        else {
           connection.query(sql_query, callback1, function (err, rows, fields) {
             connection.release();
             if (err) {
-            	console.log(sql_query);
               throw err;
               return;
             }
