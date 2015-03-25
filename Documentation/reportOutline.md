@@ -1,25 +1,39 @@
 #Outline IR
+*intro
+	* What is Cecles
+	* Challenges
+	* Relation to IR (meer de course; later in rapport de concepten)
 
 * Goals and aim of the system
-* Planning and ideas
-* Diagrams
-	* Usecase
-	* keyword pipeline
-	* result pipeline
+	* Stakeholder analysis
+	* Requirements specificarions
+	* use cases
+
+* Planning 
+	
+* System Analysis
+	* Keyword pipeline
+	* Result pipeline
+
 * The system in production
-	*how it works
-	*screenshots
-	features
+	* Design
+	* how it works
+	* screenshots
+	* features
+
 * Usability
+
 * IR component
 	* IR search theory?
 	* Metrics for recall and precision
+
 * HC competent
 	* Crowdflower
 	* End users
 * Results
 	* Outcomes
 	* Visual representation
+	* Evaluation (metrics)
 * Future work
 	* Features
 	* Mooc 
@@ -32,3 +46,4 @@
 
 
 
+(misschien verschillen in keuzes tussen ons:theorie en sjoerd en martin: in practice expliceren) 
