@@ -1,6 +1,4 @@
 # System Analysis
-## Use Case analysis
-
 
 ##The keyword pipeline
 This section supports the keyword scheme. A majority of the functionalities in the pipeline will be present at the end of Q3 of 2015. However, for explanational purposes in this document it is assumed that all function are already present. In this pipeline only the relevance of the keywords are taken into account, the search results are set out in another document. 
