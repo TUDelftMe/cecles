@@ -1,2 +1,9 @@
 node_modules
 bower_components
+
+extractors/~$removed_keywords.xlsx
+
+.project
+extractors/data.txt
+
+extractors/removed_keywords.xlsx
