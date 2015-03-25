@@ -24,25 +24,27 @@ function saveCourseInformation(data) {
 	if (data != null) {
 		var course = {courseid: '', name: '', contents: '', studygoals: ''};
 		course.courseid = data.vak.cursusid;
-		course.name = removeDiacritics(data.vak.langenaamEN);	
-		
+		course.name = removeDiacritics(data.vak.langenaamEN);
+
 		var info = data.vak.extraUnsupportedInfo.vakUnsupportedInfoVelden;
-		info.forEach(function(item) {
+		info.forEach(function (item) {
 			if (item["@label"] == 'Course Contents') {
 				course.contents = removeDiacritics(item.inhoud);
 			}
 			if (item["@label"] == 'Study Goals') {
+				if (course.courseid == 'ET3000') {
+					console.log(item.inhoud);
+				}
 				course.studygoals = removeDiacritics(item.inhoud);
 			}
 		});
-	
-		connection.query("SELECT * FROM course WHERE courseid = '"+course.courseid+"'", function(err, rows, fields) {
-			if (err) console.log(err);
-				if (rows.length == 0) {
-					connection.query('INSERT INTO course SET ?', course, function(err, result) {
-						if (err) console.log(err);
-					});
-				}
+
+		connection.safe_query("SELECT * FROM course WHERE courseid = '" + course.courseid + "'", function (rows, fields) {
+			if (rows.length == 0) {
+				connection.safe_query('INSERT INTO course SET ?', course, function (result) {
+					if (err) console.log(err);
+				});
+			}
 		});
 	}
 }
