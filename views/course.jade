@@ -10,10 +10,15 @@ block content
     h5 Study Goals
     p= course.studygoals
     h5 Keywords
-    ul
-    each k in keywords
-      li
-        a(href='/keyword/#{k.id}') #{k.name} (#{k.relevance})
+    div.keyword-cloud(style="text-align:center;")
+      each k in keywords
+        div.keyword(id='#{k.id}',style="display:inline-block;margin:5px;")
+          span.label.label-primary(style="font-size:14px;font-weight:400;")
+            a(href='/keyword/#{k.id}')
+              span #{k.name}
+            &nbsp;
+            a.keyword-link(href='#' onclick='removeKeyword(\'#{k.id}\',\'#{course.id}\');return false;')
+              span.glyphicon.glyphicon-remove(style="font-size:12px;",)
   else
     h4 Courses
     table.table.table-striped

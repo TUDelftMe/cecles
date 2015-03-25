@@ -29,6 +29,7 @@ app.use(bodyParser());
 app.use(logger('combined'));
 app.use('/bower_components',  express.static(__dirname + '/bower_components'));
 app.use('/static',  express.static(__dirname + '/static'));
+app.use('/fonts',  express.static(__dirname + '/bower_components/bootstrap/fonts/'));
 app.use(flash());
 //app.use(express.static('static'));
 app.use(session({ secret: 'keyboard cat' }));
