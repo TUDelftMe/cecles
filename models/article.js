@@ -69,3 +69,13 @@ exports.getArticlesByCourseId = function(courseId, callback) {
 		});
 	});
 };
+
+exports.getArticlesByUserIdCourseId = function(userId, courseId, callback) {
+	Keyword.getKeywordsByUserIdCourseId(userId, courseId, function(keywords) {
+		var keywordIds = [];
+		for (i in keywords) keywordIds[i] = keywords[i].id;
+		Article.getArticlesByKeywordIds(keywordIds, function(articles) {
+			callback(articles);
+		});
+	});
+};

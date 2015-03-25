@@ -42,8 +42,28 @@ exports.getKeywordsByCourseId = function (courseId, callback) {
   });
 };
 
+exports.getKeywordsByUserIdCourseId = function (userId, courseId, callback) {
+  Keyword.getKeywordsByUserIdCourseIds(userId, [courseId], function (keywords) {
+    callback(keywords);
+  });
+};
+
 exports.getKeywordsByCourseIds = function (courseIds, callback) {
   connection.safe_query('SELECT k.*, ck.relevance FROM course_keyword AS ck LEFT JOIN keyword AS k ON k.id = ck.id_keyword WHERE ck.id_course IN (' + courseIds.join(',') + ')', function (rows, fields) {
+    keywords = rows;
+    callback(keywords);
+  });
+}
+
+exports.getKeywordsByUserIdCourseIds = function (userId, courseIds, callback) {
+  connection.safe_query('SELECT k.*, ck.relevance '+
+  		'FROM course_keyword AS ck '+
+  		'LEFT JOIN keyword AS k ON k.id = ck.id_keyword '+
+  		'LEFT JOIN remove_user_keyword AS ruk ON ruk.id_course_keyword = ck.id '+
+  			'AND ruk.id_user = '+connection.escape(userId)+' '+
+  		'WHERE ck.id_course IN (' + courseIds.join(',') + ') '+
+  			'AND (ruk.id_user != '+connection.escape(userId)+' OR ruk.id_user IS NULL) '+
+  		'GROUP BY k.id', function (rows, fields) {
     keywords = rows;
     callback(keywords);
   });
@@ -67,10 +87,8 @@ exports.downvoteByUserIdCourseIdKeywordId = function(userId, courseId, keywordId
 			var removeUserKeyword = {id_user: userId, id_course_keyword: courseKeyword.id};
 			CourseKeyword.userAllowedToVote(userId, courseKeyword.id, function(allowed) {
 			if (allowed) {
-				connection.safe_query('INSERT INTO remove_user_keyword SET ?', removeUserKeyword, function(err, result) {
-					if (err) throw err;
-					connection.safe_query('SELECT COUNT(*) AS count FROM remove_user_keyword WHERE id_course_keyword = '+connection.escape(courseKeyword.id), function(err, rows, fields) {
-						if (err) throw err;  	
+				connection.safe_query('INSERT INTO remove_user_keyword SET ?', removeUserKeyword, function(result) {
+					connection.safe_query('SELECT COUNT(*) AS count FROM remove_user_keyword WHERE id_course_keyword = '+connection.escape(courseKeyword.id), function(err, rows, fields) {	
 						var count = rows[0]['count'];
 						if (count >= 5) {
 							CourseKeyword.removeCourseKeywordById(courseKeyword.id, function(result) {

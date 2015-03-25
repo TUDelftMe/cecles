@@ -86,7 +86,7 @@ app.get('/course/:id', ensureAuthenticated, course.course);
 
 app.get('/keyword', ensureAuthenticated, keyword.index);
 app.get('/keyword/:id', ensureAuthenticated, keyword.keyword);
-app.get('/keyword/downvote/:courseId/:keywordId', ensureAuthenticated, keyword.downvote);
+app.post('/keyword/downvote/:courseId/:keywordId', ensureAuthenticated, keyword.downvote);
 
 app.post('/search', ensureAuthenticated, search.result);
 

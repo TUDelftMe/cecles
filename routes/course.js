@@ -26,7 +26,7 @@ exports.course = function(req, res){
   req.getConnection(function(err,connection) {
   	Course.getCourseById(req.params.id, function(course) {
     	Course.getCoursesByIds(req.user.courses, function(userCourses) {
-      	Keyword.getKeywordsByCourseId(course.id, function(keywords) {
+      	Keyword.getKeywordsByUserIdCourseId(req.user.id, course.id, function(keywords) {
       		Article.getArticlesByCourseId(course.id, function(articles) {
 	      		res.render('course', { 
 	      			title: course.name,

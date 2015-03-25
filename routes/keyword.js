@@ -34,7 +34,6 @@ exports.keyword = function(req, res){
 exports.downvote = function(req, res){
 	console.log(req.user.id);
 	CourseKeyword.downvoteByUserIdCourseIdKeywordId(req.user.id, req.params.courseId, req.params.keywordId, function(result) {
-		console.log(result); 
 		res.end(JSON.stringify(result));
 	});
 };
