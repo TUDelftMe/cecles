@@ -9,11 +9,12 @@
 	* Requirements specificarions
 	* use cases
 
-* Planning 
+* (Planning )
 	
 * System Analysis
 	* Keyword pipeline
 	* Result pipeline
+	* Information flow (zoals in report, misschien in 'Design')
 
 * The system in production
 	* Design
@@ -46,4 +47,6 @@
 
 
 
-(misschien verschillen in keuzes tussen ons:theorie en sjoerd en martin: in practice expliceren) 
+(misschien verschillen in keuzes tussen ons: theorie en sjoerd en martin: in practice expliceren) 
+
+
