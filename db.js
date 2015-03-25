@@ -24,7 +24,8 @@ module.exports = {
         connection.query(sql_query, function (err, rows, fields) {
           connection.release();
           if (err) {
-            console.log(err);
+          	console.log(sql_query);
+            throw err;
             return;
           }
           callback(rows, fields);
