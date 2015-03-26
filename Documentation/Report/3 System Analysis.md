@@ -5,10 +5,11 @@ The system analysis chapter is dedicated to explaning the functionality of the C
 
 ##The keyword pipeline
 This section provides information on how the keyword processing in CECLES is planned. Not all of the features presented here will be functional in the prototype that is presented with this report. However, for explanational purposes in this document it is assumed that all features are already present.
-### relevance
+
+### Relevance
 In this pipeline focuses on delivering keywords that represent the course contents best. Therefore, 'relevance' in this section is defined to be the 'measure' by which a keyword is representative of the course contents whilst being specific enough to have meaning.
 
-###Keyword Diagram
+###Keyword Processing Diagram
 
 ![Pipeline keywords](../Diagrammen/Pipeline keyword relevance.png "Keyword Pipeline Diagram")
 
@@ -17,8 +18,8 @@ For the initial CECLES application the course data from the TUDelft API is used.
 
 Because even at the TU spelling errors are quite common, an initial spelling check on all course descriptions and goals is performed.
 
-### Alchemy
-Alchemy supports a computer’s ability to understand human language and vision via an SaaS API. It integrates advanced text mining and computer vision functionality into Cecles' data-processing pipeline.
+### AlchemyAPI
+AlchemyAPI is a semantic analysis tool which supports a computer’s ability to understand human language and vision via an SaaS API. It integrates advanced text mining and computer vision functionality into Cecles' data-processing pipeline. [AlchemyAPI](http://www.alchemyapi.com/)
 
 ### Text analysis
 Since Alchemy already does a large part of the analysis, stemming is the action most performed after the term extraction. Stemming is done because after testing several queries, overlap was found between several keywords (not yet in the results). 
