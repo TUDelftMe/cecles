@@ -1,14 +1,16 @@
 # System Analysis
+The system analysis chapter is dedicated to explaning the functionality of the CECLES system. This chapter is split in two mains sections, the keyword pipeline and the results pipeline. 
+
+<!-- expand on this -->
 
 ##The keyword pipeline
-This section supports the keyword scheme. A majority of the functionalities in the pipeline will be present at the end of Q3 of 2015. However, for explanational purposes in this document it is assumed that all function are already present. In this pipeline only the relevance of the keywords are taken into account, the search results are set out in another document. 
+This section provides information on how the keyword processing in CECLES is planned. Not all of the features presented here will be functional in the prototype that is presented with this report. However, for explanational purposes in this document it is assumed that all features are already present.
+### relevance
+In this pipeline focuses on delivering keywords that represent the course contents best. Therefore, 'relevance' in this section is defined to be the 'measure' by which a keyword is representative of the course contents whilst being specific enough to have meaning.
 
-********** Document updaten obv nieuwe pipeline ***********
-********* Hier de pipeline (Diagram) ***********
+###Keyword Diagram
 
-![Pipeline keywords](../Diagrammen/Pipeline keyword relevance.png "keyword pipeline")
-
-
+![Pipeline keywords](../Diagrammen/Pipeline keyword relevance.png "Keyword Pipeline Diagram")
 
 ###Sources
 For the initial CECLES application the course data from the TUDelft API is used. To extend the course description and also for increasing the amount of keywords that are extracted, additional sources like the OCR data from the Colegerama slides should be used. This is intended to improve the relevance of the keywords that are used for querying.
