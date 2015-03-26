@@ -8,15 +8,21 @@ var Article = require('./article');
 var Keyword = require('./keyword');
 var CourseKeyword = require('./course_keyword');
 
-exports.getCourseKeywordById = function(courseId, keywordId, callback) {
+exports.getCourseKeywordById = function(id, callback) {
 	connection.safe_query('SELECT * FROM course_keyword WHERE id = '+connection.escape(id), function(rows, fields) {
-		callback(rows[0]);
+		if (rows.length == 0)
+			callback({});
+		else
+			callback(rows[0]);
 	});
 }
 
 exports.getCourseKeywordByCourseIdKeywordId = function(courseId, keywordId, callback) {
 	connection.safe_query('SELECT * FROM course_keyword WHERE id_keyword = '+connection.escape(keywordId)+' AND id_course = '+connection.escape(courseId), function(rows, fields) {
-		callback(rows[0]);
+		if (rows.length == 0)
+			callback({});
+		else
+			callback(rows[0]);
 	});
 }
 
@@ -44,17 +50,17 @@ exports.downvoteByUserIdCourseIdKeywordId = function(userId, courseId, keywordId
 						var count = rows[0]['count'];
 						if (count >= 5) {
 							CourseKeyword.removeCourseKeywordById(courseKeyword.id, function(result) {
-								callback({error: 0, result: true});
+								callback({error: false, result: true, keyword_inactive: true});
 							});
 						}
 						else {
-							callback({error: 0, result: false});
+							callback({error: false, result: true, keyword_inactive: false});
 						}
 					});
 				});
 			}
 			else {
-				callback({error: 1, errorMessage: 'User already voted', result: false});
+				callback({error: true, errorMessage: 'User already voted', keyword_inactive: false, result: false});
 			}
 		});
 	});

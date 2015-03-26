@@ -13,12 +13,12 @@ block content
     div.keyword-cloud
       each k in keywords
         div.keyword(id='#{k.id}',style="display:inline-block;margin:2px 2px 0 2px;")
-          span.label.label-primary(style="font-size:12px;font-weight:400;")
+          span.label.label-primary(style="font-size:#{k.fontsize}px;font-weight:400;")
             a(href='/keyword/#{k.id}')
               span #{k.name}
             &nbsp;
             a.keyword-link(href='#' onclick='removeKeyword(\'#{k.id}\',\'#{course.id}\');return false;')
-              span.glyphicon.glyphicon-remove(style="font-size:10px;",)
+              span.glyphicon.glyphicon-remove(style="font-size:#{k.fontsize}px;",)
   else
     h4 Courses
     table.table.table-striped

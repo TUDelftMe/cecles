@@ -27,7 +27,13 @@ exports.course = function(req, res){
   	Course.getCourseById(req.params.id, function(course) {
     	Course.getCoursesByIds(req.user.courses, function(userCourses) {
       	Keyword.getKeywordsByUserIdCourseId(req.user.id, course.id, function(keywords) {
-      		Article.getArticlesByCourseId(course.id, function(articles) {
+      		Article.getArticlesByUserIdCourseId(req.user.id, course.id, function(articles) {
+      			for (var i in keywords) {
+      				var font_min = 10;
+      				var font_max = 20;
+      				var relevance = (keywords[i].relevance - 0.5) / 0.5;
+      				keywords[i].fontsize = font_min + ((font_max - font_min) * relevance);
+      			}
 	      		res.render('course', { 
 	      			title: course.name,
 	      			keywords: keywords, 
