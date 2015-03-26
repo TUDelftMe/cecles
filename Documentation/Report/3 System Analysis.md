@@ -6,6 +6,7 @@ This section supports the keyword scheme. A majority of the functionalities in t
 ********** Document updaten obv nieuwe pipeline ***********
 ********* Hier de pipeline (Diagram) ***********
 
+![Pipeline keywords](../Diagrammen/Pipeline keyword relevance.png "keyword pipeline")
 
 
 
