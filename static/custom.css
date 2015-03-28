@@ -1,3 +1,24 @@
 .label-primary a {
     color: #ffffff;
 }
+
+.keyword {
+    line-height: normal;
+    margin: 2px;
+    display:inline-block;
+    border:10px;
+}
+
+.keybox {
+    padding: 3px 6px 3px;
+    line-height: normal;
+    background-color:#00A6D6;
+    border-radius: 0.25em;
+    vertical-align: bottom;
+}
+
+
+.keybox a {
+    color:#ffffff;
+    font-weight:400;
+}

@@ -12,8 +12,8 @@ block content
     h5 Keywords
     div.keyword-cloud
       each k in keywords
-        div.keyword(id='#{k.id}',style="display:inline-block;margin:2px 2px 0 2px;")
-          span.label.label-primary(style="font-size:#{k.fontsize}px;font-weight:400;")
+        div.keyword(id='#{k.id}')
+          div.keybox(style="font-size:#{k.fontsize}px;")
             a(href='/keyword/#{k.id}')
               span #{k.name}
             &nbsp;
