@@ -5,6 +5,7 @@
 var Course = require('./../models/course');
 var Article = require('./../models/article');
 var Keyword = require('./../models/keyword');
+var request = require('request');
 
 exports.index = function(req, res){
 	var courses = [];
@@ -22,7 +23,6 @@ exports.index = function(req, res){
 };
 
 exports.course = function(req, res){
-	var courses = [];
   req.getConnection(function(err,connection) {
   	Course.getCourseById(req.params.id, function(course) {
     	Course.getCoursesByIds(req.user.courses, function(userCourses) {

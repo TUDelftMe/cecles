@@ -3,6 +3,7 @@
  */
 
 var Course = require('./../models/course');
+var Coursera = require('./../models/coursera');
 var CourseKeyword = require('./../models/course_keyword');
 var Article = require('./../models/article');
 var Keyword = require('./../models/keyword');
@@ -18,13 +19,17 @@ exports.keyword = function(req, res){
 		Course.getCoursesByKeywordId(keyword.id, function(relevantCourses) {
 			Article.getArticlesByKeywordId(keyword.id, function(articles) {
 				Course.getCoursesByIds(req.user.courses, function(userCourses) {
-					res.render('keyword', { 
-						title: keyword.name,
-						keyword: keyword,
-						articles: articles,
-						relevantCourses: relevantCourses,
-						userCourses: userCourses,
-            user: req.user.username});
+					Coursera.getCourserasByKeywordId(keyword.id, function(couseraCourses) {
+						res.render('keyword', {
+							title: keyword.name,
+							keyword: keyword,
+							articles: articles,
+							relevantCourses: relevantCourses,
+							userCourses: userCourses,
+							user: req.user.username,
+							courseras: couseraCourses.slice(0,9)
+						});
+					});
 				});
 			});
 		});

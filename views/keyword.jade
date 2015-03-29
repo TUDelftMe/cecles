@@ -20,5 +20,8 @@ block content
               li
                 a(href='#{article.url}', target='_blank')= article.title
         div.col-md-3
-
-block right
+          h5 Coursera
+          ul
+            each coursera in courseras
+              li
+                a(href='#{coursera.url}', target='_blank')= coursera.course_name
