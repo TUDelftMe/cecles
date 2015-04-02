@@ -11,18 +11,12 @@ connection = db.connect();
 function extractResults() {
 	connection.safe_query('SELECT * '+
 			'FROM keyword '+
-			'WHERE google_results IS NULL LIMIT 10', function (keywords, fields) {
+			'WHERE google_results IS NULL '+
+			'LIMIT 1000', function (keywords, fields) {
 		var i = 0;
 		keywords.forEach(function(k) {
 			searchGoogle(k.name, k.id);
-			sleep.usleep(750000);
 			i++;
-			if (i >= 10) {
-				i = 0;
-				setTimeout(function() { 
-					extractResults();
-				}, 1500);
-			}
 		});
 	});
 }
@@ -39,6 +33,9 @@ function searchGoogle(query, id) {
 
 function addTotal(id, total) {
 	console.log(total);
+	if (total == 'NaN') {
+		return;
+	}
 	connection.safe_query('UPDATE keyword SET google_results = '+connection.escape(total)+' WHERE id = '+connection.escape(id), function(result) {
 		console.log(result);
 	});

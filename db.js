@@ -26,6 +26,8 @@ module.exports = {
           connection.query(sql_query, function (err, rows, fields) {
             connection.release();
             if (err) {
+            	console.log(err);
+            	return;
               throw err;
               return;
             }
@@ -36,6 +38,8 @@ module.exports = {
           connection.query(sql_query, callback1, function (err, rows, fields) {
             connection.release();
             if (err) {
+            	console.log(err);
+            	return;
               throw err;
               return;
             }
