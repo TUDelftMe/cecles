@@ -1,23 +1,23 @@
 # System in Production
 
+
 ## Design of Cecles
 
-- Graphical design
-- Stephans mockups hier
-- Martins template
-- Information flow uit report
+This section describes the design of Cecles. This design includes the visual and the information design. Because the application is built incrementally, the first design was a light, easy to communicate design. After the concept was clear the production and design went hand in hand resulting in less preliminary explicit designs.
 
+
+### Visual design
+The mock-ups below show the initial visual design of the application. These mock-ups helped to get a first feeling on the UI of the application and to communicate the first stage of the application.
 ![Result page](../Diagrammen/mockup-result page.png "mockup result page")
 
-![Login](../Diagrammen/CECLES-login mockup.png "LOGIN CECLES")
-
-
-********** GEKOPIEERD UIT CECLES REPORT
-
-This chapter gives a brief overview of the design of the system. 
+![Login](../Diagrammen/CECLES-login mockup.png "Login Celces")
+As can be seen in the remainder of this chapter, the actual design differs from this visual. This was indeed not the purpose of the mock-ups as we aimed for a good usability with proper functions instead of a focus on design.
 
 ## Information Flow
 An overview of the basic information flow in CECLES can be found in the next chapter. Also future functionalities are addressed, which are elaborated in future work and the remainder of the report. 
+
+![Information flow](../Diagrammen/information_flow.png "Information flow")
+This diagram describes an early design. Although not all functionalities with the eventually established requirements, it gives a clear overview of the information structure of the application.
 
 ### TU Delft API
 The main source of information is the [TU Delft API](http://apidoc.tudelft.nl/). From this source the system extracts both the courses and users. From every course some basic textual in- formation can be retrieved as well as which user is enrolled in which course. From the basic textual information from each course the system will extract the main terms which results in topics relevant for each course. These topics can be used to search other sources.
@@ -43,11 +43,6 @@ The system will retrieve and compute all information as mentioned above on befor
 
 
 ## How Cecles works
-Beschrijving functionalities cecles (evt verwijzen naar future work)
-Bijv: hoe gestest obv google etc.
-Screenshots
-Use cases
-
 
 ### Authentication
 
