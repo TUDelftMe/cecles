@@ -16,11 +16,10 @@ This is a dilemma which needs to be resolved though trial-and-error with user fe
 The recommender system, although not implemented in this version, will suggest additional courses one can follow. The first step will be to implement a item-based recommender. Since this kind of collaborative filtering is easier to implement, this mostly is a god method to start with, so testing on the recommendations can be performed, for example. This already is a nice addition to the content-based recommendation the application uses right now in a way (similarities) based on the course guide). The last step to implement recommendations is to identify identical students based on the courses they follow and the issues they encounter. At this moment, when the TU authentication works, students can be identified based on the study and the courses they are enrolled into. The addition of user-based recommendation is that the similarity of students do not have to be assumed by the study they follow. Therefore unexpected connections between students taking different courses and study programs can be found.
 
 ## IR architecture
-The IR architecture of CECLES has been partially discussed before, bu this section tries to wrap it up and frame it within the theoretical paradigms of the discourse. 
+The IR architecture of CECLES has been partially discussed before, but this section tries to frame it within the theoretical paradigms of the discourse. 
 
 ### Pulling or pushing information
 The system of CECLES tries to provide information on demand, which is an information pull to the eye of the user. On the back hand however, the search queries have already been processed and partially ranked before the user searching for them. Depending on the point of view, the information can also be considered to be pushed to the user since the user only has to change its filters.
-
 However, the user should get the impression that the search is rather pulled instead of pushed.
 
 ### Precision - Recall
@@ -29,30 +28,6 @@ Precision, the retrieval of the most relevant documents, and recall, the retriev
 ### Location of Computation
 CECLES is currently designed to be a centralized (one node) information retrieval platform. The queries are, to a certain degree, predefined which allows to pre-execute them (asynchronous search). Also, the searches itself are not executed by the system: CECLES uses external search APIs to retrieve the relevant study material. 
 Both the predefined queries and the asynchronous search operation save computation power and allow for such a thin architecture.
-
-Set of index terms or keywords
-	extracted directly form text
-	specified by human subjects (information science)  metadata
-		Most concise representation
-		Poor quality of retrieval
-Full text representation
-	Most complete representation
-	High computational cost
-Large collections
-	Reduce set of representative keywords
-		Elimination of stop words
-		Stemming
-		Identification of noun phrases
-		Further compression
-Structure representation
-	Chapter, section, sub-section, etc
-
-Information Retrieval
-	Given a set of query terms and a set of document terms select only the most relevant documents [precision], and preferably all the relevant [recall]. 
-Information Extraction
-	Extract from the text what the document means. 
-IR systems can FIND documents but need not “understand” them
-
 
 
 [1] http://www.alchemyapi.com/products/alchemylanguage/keyword-extraction
