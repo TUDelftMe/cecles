@@ -291,10 +291,9 @@ When a student needs information on a particular topic, he or she can search dir
 ![Example wiki page](../VisualizationApp/7 coursera SS.png "Wikipedia page: result from a course")
 Students can consult different resources. From wikipedia for a quick explaination to a Coursera course for a profound exploration.
 
-## Differences design and actual application
-BESCHRIJVING VERSCHILLEN
-
 ## Future work
+Much of the future work is already elaborated on in this report. Since we considered it more important the explain future work in the category of the content, only functions that are not mentioned in the remainder of the report are described in this section.
+
 ### Video segmentation
 
 #### Simple heuristic segmentation
