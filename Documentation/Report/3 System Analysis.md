@@ -1,7 +1,5 @@
 # System Analysis
-The system analysis chapter is dedicated to explain the functionality of the CECLES system. This chapter is split in two mains sections, the keyword pipeline and the results pipeline. 
-
-<!-- expand on this -->
+The system analysis chapter is dedicated to explain the functionality of the CECLES system. This chapter is split in two mains sections, the keyword pipeline and the results pipeline. Both processes are developed to generate results as relevant as possible for students. The keyword section is split from the results process because their approach differ. The keywords pipeline is based on theoretical and expert-based operations. The results pipeline, on the other hand, is reflected on user input. 
 
 ##The keyword pipeline
 This section provides information on how the keyword processing in CECLES is planned. Not all of the features presented here will be functional in the prototype that is presented with this report. However, for explanational purposes in this document it is assumed that all features are already present.
