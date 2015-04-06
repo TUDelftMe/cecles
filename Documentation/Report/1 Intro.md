@@ -9,20 +9,20 @@ The learning system answers to a student’s need for information about topics o
 CECLES bundles these redundant search operations: Each time a student has a need for information on a topic, a search query is submitted throughout multiple systems. CECLES offers the results from multiple sources with its own customized search functionality.
 
 ## Challenges
-In order for students to use this platform, it should provide a Pareto improvement on either time or relevance compared to the current situation. In other words, the platform should provide results that are more precise and have a higher recall <!-- relevant ? --> within less time compared to a student using the search options of every individual source.
-
-*********** UITBREIDEN *************
+In order for students to use this platform, it should provide a Pareto improvement on either time or relevance compared to the current situation. In other words, the platform should provide results that are more relevant within less time compared to a student using the search options of every individual source. The challenge in this application is to select relevant sources for each student. Some student might have problems with certain topics that are trivial for others.
 
 ## An information retrieval system
-"Retrieving relevant information is one of the central activities in modern knowledge-driven societies. The real value of the Web can only be unlocked if the huge amount of available data can be found, analysed, and exploited so that each user can quickly find information that is both relevant and comprehensive for their needs." ([Bozzon, 2015](https://blackboard.tudelft.nl/webapps/portal/ frameset.jsp?tab_tab_group_id=_10_1/))
+"Retrieving relevant information is one of the central activities in modern knowledge-driven societies. The real value of the Web can only be unlocked if the huge amount of available data can be found, analyzed, and exploited so that each user can quickly find information that is both relevant and comprehensive for their needs." ([Bozzon, 2015](https://blackboard.tudelft.nl/webapps/portal/ frameset.jsp?tab_tab_group_id=_10_1/))
 
 The same goes for retrieving course material and additional information related to courses. The following steps are used for the information retrieval part. This will result in study information that can be quickly found and is both relevant and comprehensive for their needs.
-* Derive main topics of courses from TUDelft API from, for example, description and study goals
+* Derive main topics of courses from TUDelft API from description and study goals
 * Analyze course topics with term extraction
-* Finding similarities between courses and clustering of courses with similar topics
-* Retrieving information of Collegerama by analyzing the accessory slides and segment the lectures by topic
-* Retrieving related information from external sources such as: YouTube, Wikipedia and Google Scholar
-* Segmentation of YouTube videos
+* Finding similarities between courses
+* Retrieving related information from external sources such as: YouTube, Wikipedia, Coursera and Google Scholar
+* Future work: segmentation of YouTube videos, retrieving information of Collegerama by analyzing the accessory slides and segment the lectures by topic
 
+Human computation and crowd-sourcing is mainly used for verification and the assessment for the relevance of the content. The human computation is used to directly review the content or keywords related to the course. Crowd-sourcing is used to predefine the materials offered.
+* Rating of search results (external sources) relevant or irrelevant to ”learn” CECLES which results are useful. User feedback is used for assessing this relevance.
+* The relevance of particular keywords in relation to courses are assessed with the use of CrowdFlower. The relevances is checked with the course description.
+* Some future work regarding crowd-sourcing: Indexation of YouTube videos by segmentation of the video and using CrowdFlower to name the topics mentioned in each segment.
 
-************* Updaten op huidig systeem ***********

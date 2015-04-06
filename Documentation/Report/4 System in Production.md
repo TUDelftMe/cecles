@@ -23,6 +23,9 @@ The main source of information is the [TU Delft API](http://apidoc.tudelft.nl/).
 ### Wikipedia API
 The [Wikipedia API](http://www.mediawiki.org/wiki/API:Main_page) enables CECLES to find relevant pages for the course. Again the topics extracted from the course information can be used for this matter.
 
+### Coursera API
+The [Coursera Catalog APIs](https://tech.coursera.org/app-platform/catalog/) expose the list of courses, instructors and universities available on the Coursera platform. These APIs are available publicly without authentication over the internet. These APIs are still beta and can change in backwards-incompatible ways without warning.
+
 ### CollegeRama
 Some lectures at TU Delft are recorded to give students the possibility to watch the lecture online. From the information found at the TU Delft API we can easily connect these lectures to the courses by their course identifier.
 
