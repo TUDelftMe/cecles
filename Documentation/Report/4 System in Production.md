@@ -6,8 +6,9 @@
 - Stephans mockups hier
 - Martins template
 - Information flow uit report
+![Result page](../Diagrammen/mockup result page.png "mockup result page")
 
-
+![Login](../Diagrammen/CECLES login mockup.png "LOGIN CECLES")
 
 
 ********** GEKOPIEERD UIT CECLES REPORT
@@ -37,10 +38,6 @@ The [YouTube API](https://developers.google.com/youtube/v3/) enables the system 
 Google Scholar does not have an API, but several alternatives (even unofficial API’s) can be found on the online. For example, a parser for the output of Google Scholar is available on [icir](http://www. icir.org/christian/scholar.html). This enables the system to retrieve relevant papers with the topics belonging to the course.
 
 The system will retrieve and compute all information as mentioned above on beforehand and save it in the database so it can be quickly searched through according to the extracted topics per course.
-
- GEKOPIEERD UIT CECLES REPORT *****************
-
-
 
 
 
@@ -73,6 +70,8 @@ Use cases
 
 ![Example wiki page](../VisualizationApp/7 WIKI geo brownian motion SS.png "Wikipedia page: result from a course")
 
+## Differences design and actual application
+BESCHRIJVING VERSCHILLEN
 
 ## Future work
 ### Video segmentation
