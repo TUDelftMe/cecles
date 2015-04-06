@@ -1,5 +1,5 @@
 # Information Retrieval
-This chapter takes a more theoretical view on the IR processes that are included in CECLES.
+This chapter takes a more theoretical view on the IR processes that are included in CECLES to support the system analysis and the application description.
 
 ## AlchemyAPI
 CECLES uses the AlchemyAPI early on for the extraction of terms from the course guide. Although easily implemented and bringing back useful results, the Alchemy is a proprietary system and does not disclose exactly which algorithms are used. 
@@ -12,7 +12,8 @@ These keywords are partially overlapping in their representation of the course c
 However, implementing such stemming might reduce specificity of a keyword and therefore reduce the relevancy of later retrieved study material. 
 This is a dilemma which needs to be resolved though trial-and-error with user feedback.
 
-## Recomender system
+## Recommender system
+The recommender system, although not implemented in this version, will suggest additional courses one can follow. The first step will be to implement a item-based recommender. Since this kind of collaborative filtering is easier to implement, this mostly is a god method to start with, so testing on the recommendations can be performed, for example. This already is a nice addition to the content-based recommendation the application uses right now in a way (similarities) based on the course guide). The last step to implement recommendations is to identify identical students based on the courses they follow and the issues they encounter. At this moment, when the TU authentication works, students can be identified based on the study and the courses they are enrolled into. The addition of user-based recommendation is that the similarity of students do not have to be assumed by the study they follow. Therefore unexpected connections between students taking different courses and study programs can be found.
 
 ## IR architecture
 The IR architecture, the process by which the system retrieves information, is largely explained in the keyword- and study material pipeline. Generalizing the two processes, the architecture is centralized does not perform live searches.
