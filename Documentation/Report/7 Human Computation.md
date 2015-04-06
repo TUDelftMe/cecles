@@ -6,8 +6,8 @@ In CECLES, there are two measures of relevancy which require human computation: 
 As derived from the goal of CECLES, solely the most relevant results should be presented to the user of the system.
 
 ## Keyword relevance
-This section builds on the keyword pipeline previously discussed in chapter **[link]**. The keywords receive a computed relevancy from the AlchemyAPI algorithm based on the source of extraction (e.g. the course description). 
-This relevancy is treated as 'base' relevancy and improved by three instances of human feedback: a moment of feedback by the teacher(s) of the course, a feedback by the students enrolled in the course and 'human computation'.
+This section builds on the keyword pipeline previously discussed in chapter 3: System Analysis. The keywords receive a computed relevancy from the AlchemyAPI algorithm based on the source of extraction (e.g. the course description). 
+This relevancy is treated as 'base' relevancy and improved by three instances of human feedback: a moment of feedback by the teacher(s) of the course, a feedback by the students enrolled in the course and 'human computation'. The sections are based on the 'how, what and who' of human computation ([Law, E., & Ahn, L. V.,2011][1]).
 
 ### Expert feedback: professor/ teacher
 The teacher is assumed to have an interest in the course and providing good and relevant study material for his or her students. As a result, the teacher is able to provide feedback on whether the keywords extracted and ranked from the course description correctly represent the course as he or she teaches it. This feedback is considered to be expert feedback and is rated higher than other feedback but at the same time there is a limited amount of people able to provide this feedback.
@@ -71,20 +71,6 @@ The result from the task are presented as the average score on a keyword followe
 ### Conclusion of CrowdFlower
 The results from CrowdFlower seem pretty alright but might need to be correlated to the relevancy scores retrieved from the AlchemyAPI to see if there is truly new information in doing the human computation. 
 The task was rated alright by the workers contributing to the task, however, at the total cost of $8 for just a fraction of the total keywords, rating all keywords this way is quite expensive.
-
-
-
-## stuff - vooral theorie
-______
-Based on Law, E., & Ahn, L. V. [2011][1], the central aspects of human computation are explained in the next sections.
-
-The 'how, what and who' of human computation 
-
-* On human computation
-* 
-* goal of human computation in CECLES: Determinate relevancy
-* end users (students), teachers and CrowdFlower
- * 'wisedom of masses vs. experts'
 
 
 [1] Law, E., & Ahn, L. V. (2011). Human computation. Synthesis Lectures on Artificial Intelligence and Machine Learning, 5(3), 1-121.
