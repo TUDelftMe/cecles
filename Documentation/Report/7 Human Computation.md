@@ -24,8 +24,16 @@ Crowdflower is a human computation platform which provides services such as sent
 
 The design of the feedback scheme at CrowdFlower needs to be more specific than with the teachers or the students since the incentive here is not, respectively, intrinsic motivation or use of the system. The incentive is financial reward. 
 
+The task given to crowdflower will be 
+> "Is this keyword a good reflection in the contents of the course described above?"
+
+this question has the limitation of being very dependent on the course guide description.
 
 
+## Search result relevance
+After determining relevant keywords for the courses, these keywords are used to search for study material. The IR components of such retrieval is described in chapter **[verwijzing]**. However, not only accurate, but also relevant materials are required which, again, requires human computation.
+
+The search result relevance is given an initial value after which users can provide implicit and explicit user feedback **[reference to chapter 3]**. The explicit feedback is given by asking for a rating of the material (e.g. thumbs up- or down). The implicit feedback is given by tracking click- and bounce rates though the material.
 
 
 Based on Law, E., & Ahn, L. V. [2011][1], the central aspects of human computation are explained in the next sections.
@@ -43,7 +51,6 @@ The 'how, what and who' of human computation
 	* Crowdflower
 	* End users
 
-> the goal of CECLES is to quickly provide accurate and relevant study materials for the topics given in a course.
 
 
 

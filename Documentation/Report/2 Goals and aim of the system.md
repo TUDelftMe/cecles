@@ -1,5 +1,16 @@
 # Goals and aim of the system
 
+## Goal of CECLES
+The goal of CECLES is the combination of several aims. The aims of CECLES, as previously described in the introduction, are:
+
+* Providing an overview of a course's learning goals and topics for enrolled students
+* Providing a collection of relevant study material
+* Reducing search times
+* Reducing distraction when searching
+
+Summarized in one sentence, the goal of CECLES is as follows:
+> The goal of CECLES is to quickly provide accurate and relevant study materials for the topics given in a course a student is enrolled in.
+
 ## Stakeholder analysis
 In the stakeholder analysis all individuals and groups that are affected by CECLES are described and their relationship with the CECLES project is explained.
 The main stakeholders in this project are:
@@ -46,7 +57,6 @@ The could haves consist of requirements that are desirable but not necessary. Th
 * The application could have the ability to merge lectures of different years and could identify changes over time
 
 
-
 ## Non functional requirements
 ### Must haves
 * CECLES should be fast and responsive
@@ -70,6 +80,14 @@ Security is of course a important issue when working with personal information. 
 The security is, for now, less important since all sources used are public sources. 
 Stability is in this phase less important. A little downtime is not such an issue. However, when widely used, it should handle peak load during examination periods.
 
-
-
 ## Use cases
+The following use case diagram is made to illustrate the interaction with the system. The actors are the user (student) and a member of the teaching staff ('teacher', either a professor or other qualified teacher).
+
+** Use Case Diagram**
+
+The student is able to log in by providing credentials to CECLES which will then register in which courses the student is currently enrolled in. 
+The system previously did the keyword extraction of the course based on the course description and the student is presented with keywords for that course.
+
+By removing keywords from view, the student is able to make a selection of keywords that are relevant for him or her. The student the receives the study material based on the selected keywords. The search for this study material has also already been executed to save time. 
+
+The member of the teaching staff is able to provide feedback on the relevancy of the keywords for the course. more on this in **[link to chapter HC]**
