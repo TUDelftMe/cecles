@@ -395,7 +395,7 @@ The job would have the following title and instructions:
 
 The worker would then be presented with the full text course guide description and the study goals and would have rate how well a keyword reflects the contents of the course.
 
-**image of CF question **
+![CrowdFlower question](../Diagrammen/CF_question.png "CrowdFlower question")
 
 ### Test questions
 To make sure that only competent workers can contribute, test questions have been built in. 
@@ -408,12 +408,12 @@ The final step before launching is the settings of the job. To stay withing a lo
 ### Rating of workers
 The workers behind CrowdFlower also had the ability to indicate their satisfaction about the job. The feedback was generally O.K. with an overall 3.9 out of 5. The worst sub-score was on the 'ease of job', which received 3.4 out of 5. 
 
-**Image CF_contributor_rating.png **
+![CrowdFlower Contributor ratings](../Diagrammen/CF_contributor_rating.png "CrowdFlower Contributor ratings")
 
 ### Results
 The result from the task are presented as the average score on a keyword followed by the variance on that score. The image below is an illustration of such a result. The first column is the score on keyword 1 of a course, the second the variance of the score. Every row is a different course.
 
-**image: CF_results.png **
+![CrowdFlower results excerpt](../Diagrammen/CF_results.png "CrowdFlower results excerpt")
 
 ### Conclusion of CrowdFlower
 The results from CrowdFlower seem pretty alright but might need to be correlated to the relevancy scores retrieved from the AlchemyAPI to see if there is truly new information in doing the human computation. 
