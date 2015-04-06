@@ -58,7 +58,7 @@ Use cases
 ![Course Inormation](../VisualizationApp/1 Course info SS.png "Course information page")
 
 ### Keywords
-![Kewords](../VisualizationApp/2 Keywords.png "Keywords section")
+![Keywords](../VisualizationApp/2 Keywords SS.png "Keywords section")
 
 ### Search
 ![Search example](../VisualizationApp/3 Search results Brownian motion SS.png "Search example")
