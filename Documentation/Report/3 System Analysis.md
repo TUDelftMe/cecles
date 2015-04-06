@@ -35,7 +35,7 @@ If a part of the keywords cannot be examined could be processed with the help of
 ### The User
 When the keywords are extracted, scored on their relevance and sorted and filtered by eg. relevance they can be used for generating queries. Whether the right keywords are extracted is among others examined by the users' feedback. 
 
-Relevance feedback is typically used for query expansion during short-term modeling of a user's immediate information need and for user profiling during long-term modeling of a user's persistent interests and preferences. Traditionally feedback methods require explicit feedback given by, for example, voting a plus or a minus. Such relevance feedback methods force users to engage in additional activities beyond their normal searching behavior [(Kelly, 	2003)](http://people.csail.mit.edu/teevan/work/publications/papers/sigir-forum03.pdf). To limit this 'costs' for the user in the keyword part, CECLES focuses primarily on implicit feedback. In this way in the parts that require explicit feedback most, the effectiveness of explicit techniques will remain well.
+Relevance feedback is typically used for query expansion during short-term modeling of a user's immediate information need and for user profiling during long-term modeling of a user's persistent interests and preferences. Traditionally feedback methods require explicit feedback given by, for example, voting a plus or a minus. Such relevance feedback methods force users to engage in additional activities beyond their normal searching behavior [(Kelly,	2003)](http://people.csail.mit.edu/teevan/work/publications/papers/sigir-forum03.pdf). To limit this 'costs' for the user in the keyword part, CECLES focuses primarily on implicit feedback. In this way in the parts that require explicit feedback most, the effectiveness of explicit techniques will remain well.
 
 With implicit feedback click rates, conversions and bounce rates are used to re-rank the keywords in the score model  (or in the sort and filter step). With explicit feedback the user is asked to assess the keywords on their relevance. 
 Also, when a user thinks a relevant keyword is missing he or she can submit additional keywords. These inputs will then be checked with the blacklist and put in the score model.
@@ -49,6 +49,26 @@ This is as mentioned in the beginning of this paragraph. Instead of asking the s
 
 
 ## The result Pipeline
-************** INTRO RESULT PIPELINE********
-*************** Hier pipeline diagram********
-**********BESCHRIJVING INTRO RESULT PIPELINE *************
+This section provides information on how the results are processed in the CECLES application. The results process in sequence with the keyword result process. The results obtained from (potential) sources other than Wikipedia are annotated with ABC. All the results get an initial relevance score based on the keywords used to search for those results. More important is the feedback that will determine the relevance of the results.
+
+### Result Processing Diagram
+![Pipeline results](../Diagrammen/Pipeline result relevance.png "Results Pipeline Diagram")
+
+### Sources
+The results that are used as additional materials for TU Delft courses are queried with the use of keywords described in the previous section. This process will executed every couple of weeks in the first phase to weekly or daily depending on the future features and sources used. 
+The results are sorted by relevance for the course. In the working example only the Wikipedia pages are shown. When multiple sources are shown the sources will be ranked and sorted on the average relevance of the results.
+
+### Results
+The results have a relevance based on among others: the keywords used, the content in the course guide and the content of the source. When displayed on the course section, the user gives feedback on the results.
+
+#### Implicit feedback
+Same as the feedback on keywords, the implicit user feedback consists a.o. of the click behavior of the student. This feedback is used to adjust the relevance score of the results. This is an important indicator of the usefulness of a result in relation to the course. In the end, the users, students, are those who actually use the result and therefore this feedback will have a significant weight.
+
+#### Explicit feedback
+Other than with the explicit feedback on the keywords, on the results this is a good way to obtain the relevance of a result. This will also help to prevent unpopular results because of a cold start issue. When a user considers a result to be irrelevant, he or she can downgrade a result or up-vote it when considered as very relevant.
+Since some users find results not relevant where others are exactly looking for those, both implicit and explicit feedback are important. It is not desirable to delete results because a first users rates a result irrelevant.
+
+
+
+
+
