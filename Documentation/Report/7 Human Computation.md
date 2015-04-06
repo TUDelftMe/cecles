@@ -20,11 +20,11 @@ Based on the assumptions the feedback design for the students is as follows: stu
 Also, based on the final assumption, at least one round of human feedback other than the user feedback is required before students are willing to use the system. Such a 'cold-boot' must be done by the expert feedback or the human computation of CrowdFlower.
 
 ### Human computation: CrowdFlower
-Crowdflower is a human computation platform which provides services such as sentiment analysis, relevance tuning and content moderation or custom designed services which can be asked to broad or very specific 'contributors' (the people executing the tasks) [source](http://www.crowdflower.com/overview). 
+CrowdFlower is a human computation platform which provides services such as sentiment analysis, relevance tuning and content moderation or custom designed services which can be asked to broad or very specific 'contributors' (the people executing the tasks) [source](http://www.crowdflower.com/overview). 
 
 The design of the feedback scheme at CrowdFlower needs to be more specific than with the teachers or the students since the incentive here is not, respectively, intrinsic motivation or use of the system. The incentive is financial reward. 
 
-The task given to crowdflower will be: 
+The task given to CrowdFlower will be: 
 > "Is this keyword a good reflection in the contents of the course described above?"
 
 this question has the limitation of being very dependent on the course guide description.
@@ -39,7 +39,7 @@ The search result relevance is given an initial value after which users can prov
 To show test the applicability of CrowdFlower as a tool for rating the keywords we have created a task in CrowdFlower for a few, randomly selected courses.
 
 ### Job building
-The job would have the following title and instuctions:
+The job would have the following title and instructions:
 
 
 > **Title:** Does the keyword represent the course contents?
