@@ -26,7 +26,7 @@ The main source of information is the [TU Delft API](http://apidoc.tudelft.nl/).
 The [Wikipedia API](http://www.mediawiki.org/wiki/API:Main_page) enables CECLES to find relevant pages for the course. Again the topics extracted from the course information can be used for this matter.
 
 ### Coursera API
-The [Coursera Catalog APIs](https://tech.coursera.org/app-platform/catalog/) expose the list of courses, instructors and universities available on the Coursera platform. These APIs are available publicly without authentication over the internet. These APIs are still beta and can change in backwards-incompatible ways without warning.
+The [Coursera Catalog APIs](https://tech.coursera.org/app-platform/catalog/) expose the list of courses, instructors and universities available on the Coursera platform. These APIs are available publicly without authentication over the Internet. These APIs are still beta and can change in backwards-incompatible ways without warning.
 
 ### CollegeRama
 Some lectures at TU Delft are recorded to give students the possibility to watch the lecture online. From the information found at the TU Delft API we can easily connect these lectures to the courses by their course identifier.
@@ -50,26 +50,44 @@ Use cases
 
 
 ### Authentication
+
 ![Home/Login](../VisualizationApp/0 home login SS.png "Login page")
 
+The Authentication should be done by Oauth. In the working example the login is done with a sample login. When the Oauth login works, the student automatically sees the courses he or she is enrolled in and can directly search for extra content
+
 ### Welcome 
-![Course Inormation](../VisualizationApp/6 Welkom screen SS.png "Course information page")
+
+![Home page](../VisualizationApp/6 Welkom screen SS.png "Welcome")
+
+After login already suggestions are made on courses, topic and relating sources. Also the user can scroll through his or her courses and search on topics.
 
 ### Course Information
+
 ![Course Inormation](../VisualizationApp/1 Course info SS.png "Course information page")
 
+The course page contains the description and study goals extracted from the TU api. The keywords are then extracted from the course guide. For now the user has the possibility to rate the keywords as irrelevant. Further analysis can result in adding a positive rating as well
+
 ### Keywords
+
 ![Keywords](../VisualizationApp/2 Keywords SS.png "Keywords section")
 
+![Keywords interactive](../VisualizationApp/8 keywords SS.png "Keywords section")
+The keywords are extracted from the courses as described in the system analysis. The keywords are graded by relevance as shown in the first screen shot (the relevance model is described in the system analysis chapter). The second screen shot shows the keywords as presented to the user in the application. 
+
 ### Search
+
 ![Search example](../VisualizationApp/3 Search results Brownian motion SS.png "Search example")
 
 ![Study materials](../VisualizationApp/4 Brownian motion - wi4202 SS.png "Study materials within course")
 
+When a student needs information on a particular topic, he or she can search directly on a keyword. All relevant courses and materials are shown.
+
 ### Results
+
 ![Example wiki page](../VisualizationApp/5 WIKI brownian motion SS.png "Wikipedia page: result from a course")
 
-![Example wiki page](../VisualizationApp/7 WIKI geo brownian motion SS.png "Wikipedia page: result from a course")
+![Example wiki page](../VisualizationApp/7 coursera SS.png "Wikipedia page: result from a course")
+Students can consult different resources. From wikipedia for a quick explaination to a Coursera course for a profound exploration.
 
 ## Differences design and actual application
 BESCHRIJVING VERSCHILLEN
