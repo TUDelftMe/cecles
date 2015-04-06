@@ -74,7 +74,7 @@ The task was rated alright by the workers contributing to the task, however, at 
 
 
 
-## stuff
+## stuff - vooral theorie
 ______
 Based on Law, E., & Ahn, L. V. [2011][1], the central aspects of human computation are explained in the next sections.
 
