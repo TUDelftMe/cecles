@@ -52,7 +52,7 @@ The main stakeholders in this project are:
 In the Stakeholder Map below, a relative relation between interest and influence between individual stakeholders is shown. From this figure the relative importance of each stakeholders needs can be roughly determined.
 
 
-![Stakeholder diagram](../Diagrammen/interest-power-figure.pdf "Interest-power diagram")
+![Stakeholder diagram](../Diagrammen/interest-power-figure.png "Interest-power diagram")
 
 The TU Delft as an organization has most power and a fair interest in the system. Student from the university have most interest. The system however, can be interesting for non-students as well, regarding to the open course development of the TU for example. 
 The sources that are used have very little interest in the system itself but are important for the system since they provide (free) access to the data used.
