@@ -16,9 +16,9 @@ This is a dilemma which needs to be resolved though trial-and-error with user fe
 The recommender system, although not implemented in this version, will suggest additional courses one can follow. The first step will be to implement a item-based recommender. Since this kind of collaborative filtering is easier to implement, this mostly is a god method to start with, so testing on the recommendations can be performed, for example. This already is a nice addition to the content-based recommendation the application uses right now in a way (similarities) based on the course guide). The last step to implement recommendations is to identify identical students based on the courses they follow and the issues they encounter. At this moment, when the TU authentication works, students can be identified based on the study and the courses they are enrolled into. The addition of user-based recommendation is that the similarity of students do not have to be assumed by the study they follow. Therefore unexpected connections between students taking different courses and study programs can be found.
 
 ## IR architecture
-The IR architecture, the process by which the system retrieves information, is largely explained in the keyword- and study material pipeline. Generalizing the two processes, the architecture is centralized does not perform live searches.
+The IR architecture, the process by which the system retrieves information, is largely explained in the keyword- and study material pipeline. Generalizing the two processes, the architecture is centralized does not perform live searches. The searches are executed by external search engines, such as the Wikipedia search engine and 
 
 
-* search engines: built-in
+
 
 [1] http://www.alchemyapi.com/products/alchemylanguage/keyword-extraction
