@@ -1,5 +1,5 @@
 # System Analysis
-The system analysis chapter is dedicated to explaning the functionality of the CECLES system. This chapter is split in two mains sections, the keyword pipeline and the results pipeline. 
+The system analysis chapter is dedicated to explain the functionality of the CECLES system. This chapter is split in two mains sections, the keyword pipeline and the results pipeline. 
 
 <!-- expand on this -->
 
@@ -44,7 +44,8 @@ Also, when a user thinks a relevant keyword is missing he or she can submit addi
 The implicit user feedback consists a.o. of the click behavior of the student. When a result is used a lot, the relevance score will increase. This results in the most 'popular issues' at the top of the page. The more specific issues or subjects will descend to the bottom or next pages. A model should determine the proper weights and a future feature could be to categorize the topics of the course so all the topics will still be significantly represented on the first result page.
 
 #### Explicit feedback
-Since the user interface has to be as clean as possible, not to burden the student with all kinds of feedback requests, the user will not be asked for feedback in this phase. This is as mentioned in the beginning of this paragraph. Instead of asking the student, an expert's feedback is used. Teachers can see the courses they teach and have the possibility to up vote and down vote the keywords of his/ her courses as well as other courses. Since they are experts it is assumed that they will not 'spam' or  misinterpret those keywords. Therefore this feedback will get a high weight factor.
+Since the user interface has to be as clean as possible, not to burden the student with all kinds of feedback requests, the user will not be asked for feedback in this phase. How students and teachers can provide additional feedback will be explained in chapter 6: human computation. 
+This is as mentioned in the beginning of this paragraph. Instead of asking the student, an expert's feedback is used. Teachers can see the courses they teach and have the possibility to up vote and down vote the keywords of his/ her courses as well as other courses. Since they are experts it is assumed that they will not 'spam' or  misinterpret those keywords. Therefore this feedback will get a high weight factor. 
 
 
 ## The result Pipeline
