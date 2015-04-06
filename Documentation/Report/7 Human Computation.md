@@ -3,7 +3,7 @@ This chapter is dedicated to the description of the human computation element in
 
 In CECLES, there are two measures of relevancy which require human computation: the relevancy of a keyword for a specific course and the relevancy of study material for a specific keyword. 
 
-As derived from the goal of CECLES, solely the most relevant results should be presented to the user of the system.. 
+As derived from the goal of CECLES, solely the most relevant results should be presented to the user of the system.
 
 ## Keyword relevance
 This section builds on the keyword pipeline previously discussed in chapter **[link]**. The keywords receive a computed relevancy from the AlchemyAPI algorithm based on the source of extraction (e.g. the course description). 
@@ -24,7 +24,7 @@ Crowdflower is a human computation platform which provides services such as sent
 
 The design of the feedback scheme at CrowdFlower needs to be more specific than with the teachers or the students since the incentive here is not, respectively, intrinsic motivation or use of the system. The incentive is financial reward. 
 
-The task given to crowdflower will be 
+The task given to crowdflower will be: 
 > "Is this keyword a good reflection in the contents of the course described above?"
 
 this question has the limitation of being very dependent on the course guide description.
