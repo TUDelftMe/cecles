@@ -19,6 +19,48 @@ The recommender system, although not implemented in this version, will suggest a
 The IR architecture, the process by which the system 
 
 
+Misschien uitleggen wat wij hiermee doen
+Pull technology
+- User requests information in an interactive manner
+- 3 retrieval tasks
+	Browsing (hypertext)
+	Retrieval (classical  IR systems)
+	Browsing and retrieval (modern digital libraries and web systems)
+
+Push technology
+- automatic and permanent pushing of information to user
+- software agents
+- example: news service
+filtering (retrieval task) relevant information for later inspection by user
+
+
+Set of index terms or keywords
+	extracted directly form text
+	specified by human subjects (information science)  metadata
+		Most concise representation
+		Poor quality of retrieval
+Full text representation
+	Most complete representation
+	High computational cost
+Large collections
+	Reduce set of representative keywords
+		Elimination of stop words
+		Stemming
+		Identification of noun phrases
+		Further compression
+Structure representation
+	Chapter, section, sub-section, etc
+
+
+
+
+
+Information Retrieval
+	Given a set of query terms and a set of document terms select only the most relevant documents [precision], and preferably all the relevant [recall]. 
+Information Extraction
+	Extract from the text what the document means. 
+IR systems can FIND documents but need not “understand” them
+
 * search engines: built-in
 
 [1] http://www.alchemyapi.com/products/alchemylanguage/keyword-extraction
