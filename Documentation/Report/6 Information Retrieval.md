@@ -15,7 +15,7 @@ This is a dilemma which needs to be resolved though trial-and-error with user fe
 ## Recomender system
 
 ## IR architecture
-The IR architecture, the process by which the system 
+The IR architecture, the process by which the system retrieves information, is largely explained in the keyword- and study material pipeline. Generalizing the two processes, the architecture is centralized does not perform live searches.
 
 
 * search engines: built-in
