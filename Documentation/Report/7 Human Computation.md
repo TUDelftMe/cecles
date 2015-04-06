@@ -35,6 +35,42 @@ After determining relevant keywords for the courses, these keywords are used to 
 
 The search result relevance is given an initial value after which users can provide implicit and explicit user feedback **[reference to chapter 3]**. The explicit feedback is given by asking for a rating of the material (e.g. thumbs up- or down). The implicit feedback is given by tracking click- and bounce rates though the material.
 
+## CrowdFlower task
+To show test the applicability of CrowdFlower as a tool for rating the keywords we have created a task in CrowdFlower for a few, randomly selected courses.
+
+### Job building
+The job would have the following title and instuctions:
+
+
+> **Title:** Does the keyword represent the course contents?
+
+> **Instructions:** To help label course descriptions for a university, you are provided with course descriptions and several keywords that have been extracted from this description. Please rate  whether the keyword is a good representation of the course contents
+
+The worker would then be presented with the full text course guide description and the study goals and would have rate how well a keyword reflects the contents of the course.
+
+**image of CF question **
+
+### Test questions
+To make sure that only competent workers can contribute, test questions have been built in. 
+These were of the same structure as the keyword questions, but contained the course name instead of a keyword. 
+The assumption was made here that the name of the course would very well reflect the contents of the course and thus workers would have to grade this question with a 4 or 5 in order to pass.
+
+### Job Settings
+The final step before launching is the settings of the job. To stay withing a low-budget, only 12 courses with each 7 keywords have been tested by 3 workers each. The job costs $8 total, which was within our $10 dollar budget we provided to CrowdFlower.
+
+### Rating of workers
+The workers behind CrowdFlower also had the ability to indicate their satisfaction about the job. The feedback was generally O.K. with an overall 3.9 out of 5. The worst sub-score was on the 'ease of job', which received 3.4 out of 5. 
+
+**Image CF_contributor_rating.png **
+
+### Results
+The result from the task are presented as the average score on a keyword followed by the variance on that score. The image below is an illustration of such a result. The first column is the score on keyword 1 of a course, the second the variance of the score. Every row is a different course.
+
+**image: CF_results.png **
+
+### Conclusion of CrowdFlower
+The results from CrowdFlower seem pretty alright but might need to be correlated to the relevancy scores retrieved from the AlchemyAPI to see if there is truly new information in doing the human computation. 
+The task was rated alright by the workers contributing to the task, however, at the total cost of $8 for just a fraction of the total keywords, rating all keywords this way is quite expensive.
 
 
 
