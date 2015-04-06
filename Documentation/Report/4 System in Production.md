@@ -6,9 +6,10 @@
 - Stephans mockups hier
 - Martins template
 - Information flow uit report
-![Result page](../Diagrammen/mockup result page.png "mockup result page")
 
-![Login](../Diagrammen/CECLES login mockup.png "LOGIN CECLES")
+![Result page](../Diagrammen/mockup-result page.png "mockup result page")
+
+![Login](../Diagrammen/CECLES-login mockup.png "LOGIN CECLES")
 
 
 ********** GEKOPIEERD UIT CECLES REPORT
