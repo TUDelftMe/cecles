@@ -36,6 +36,10 @@ After determining relevant keywords for the courses, these keywords are used to 
 The search result relevance is given an initial value after which users can provide implicit and explicit user feedback **[reference to chapter 3]**. The explicit feedback is given by asking for a rating of the material (e.g. thumbs up- or down). The implicit feedback is given by tracking click- and bounce rates though the material.
 
 
+
+
+## stuff
+______
 Based on Law, E., & Ahn, L. V. [2011][1], the central aspects of human computation are explained in the next sections.
 
 The 'how, what and who' of human computation 
@@ -45,13 +49,6 @@ The 'how, what and who' of human computation
 * goal of human computation in CECLES: Determinate relevancy
 * end users (students), teachers and CrowdFlower
  * 'wisedom of masses vs. experts'
-
-
-* HC competent
-	* Crowdflower
-	* End users
-
-
 
 
 [1] Law, E., & Ahn, L. V. (2011). Human computation. Synthesis Lectures on Artificial Intelligence and Machine Learning, 5(3), 1-121.
