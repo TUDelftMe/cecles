@@ -61,12 +61,16 @@ The results are sorted by relevance for the course. In the working example only 
 ### Results
 The results have a relevance based on among others: the keywords used, the content in the course guide and the content of the source. When displayed on the course section, the user gives feedback on the results.
 
-#### Implicit feedback
+#### Implicit user feedback
 Same as the feedback on keywords, the implicit user feedback consists a.o. of the click behavior of the student. This feedback is used to adjust the relevance score of the results. This is an important indicator of the usefulness of a result in relation to the course. In the end, the users, students, are those who actually use the result and therefore this feedback will have a significant weight.
 
-#### Explicit feedback
+#### Explicit user feedback
 Other than with the explicit feedback on the keywords, on the results this is a good way to obtain the relevance of a result. This will also help to prevent unpopular results because of a cold start issue. When a user considers a result to be irrelevant, he or she can downgrade a result or up-vote it when considered as very relevant.
 Since some users find results not relevant where others are exactly looking for those, both implicit and explicit feedback are important. It is not desirable to delete results because a first users rates a result irrelevant.
+
+#### Expert feedback
+For the relevance of the results the user feedback is most important. This means that the users probably know best what topics they find difficult. However, for the correctness of the provided materials an expert can become important. A teacher can check whether the provided materials provide correct information. Also he or she can annotate if the materials cover the course, in terms of difficulty, for example. An expert can than delete content if it does not fit into the course.
+
 
 
 
