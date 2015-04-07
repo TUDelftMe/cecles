@@ -112,7 +112,7 @@ Stability is in this phase less important. A little downtime is not such an issu
 ## Use cases
 The following use case diagram is made to illustrate the interaction with the system. The actors are the user (student) and a member of the teaching staff ('teacher', either a professor or other qualified teacher).
 
-** Use Case Diagram**
+![Pipeline keywords](../Diagrammen/Use_Case_diagramv2.png "Use Case Diagram")
 
 ### The student
 The student is this use case is registered at the TU Delft and enrolled for courses. He or she has the intention to use CECLES as a tool to find more study materials based for the courses the student is already enrolled in.
@@ -130,8 +130,7 @@ An alternative method of validating course keywords is by having a teacher (pref
 The learning material based on the (validated) keywords is presented to the student who can now start learning.
 
 ### teacher
-The member of the teaching staff is able to provide feedback on the relevancy of the keywords for the course. more on this in **[link to chapter HC]**
-
+The member of the teaching staff is able to provide feedback on the relevancy of the keywords for the course. more on this in the chapter on human computation.
 
 # System Analysis
 The system analysis chapter is dedicated to explain the functionality of the CECLES system. This chapter is split in two mains sections, the keyword pipeline and the results pipeline. Both processes are developed to generate results as relevant as possible for students. The keyword section is split from the results process because their approach differ. The keywords pipeline is based on theoretical and expert-based operations. The results pipeline, on the other hand, is reflected on user input. 
@@ -144,7 +143,7 @@ In this pipeline focuses on delivering keywords that represent the course conten
 
 ###Keyword Processing Diagram
 
-![Pipeline keywords](../Diagrammen/Pipeline keyword relevance.png "Keyword Pipeline Diagram")
+![Pipeline keywords](../Diagrammen/Pipeline_keyword_relevance.png "Keyword Pipeline Diagram")
 
 ###Sources
 For the initial CECLES application the course data from the TUDelft API is used. To extend the course description and also for increasing the amount of keywords that are extracted, additional sources like the OCR data from the Colegerama slides should be used. This is intended to improve the relevance of the keywords that are used for querying.
@@ -185,7 +184,7 @@ This is as mentioned in the beginning of this paragraph. Instead of asking the s
 This section provides information on how the results are processed in the CECLES application. The results process in sequence with the keyword result process. The results obtained from (potential) sources other than Wikipedia are annotated with ABC. All the results get an initial relevance score based on the keywords used to search for those results. More important is the feedback that will determine the relevance of the results.
 
 ### Result Processing Diagram
-![Pipeline results](../Diagrammen/Pipeline result relevance.png "Results Pipeline Diagram")
+![Pipeline results](../Diagrammen/Pipeline_result_relevance.png "Results Pipeline Diagram")
 
 ### Sources
 The results that are used as additional materials for TU Delft courses are queried with the use of keywords described in the previous section. This process will executed every couple of weeks in the first phase to weekly or daily depending on the future features and sources used. 
@@ -215,9 +214,9 @@ This section describes the design of Cecles. This design includes the visual and
 
 ### Visual design
 The mock-ups below show the initial visual design of the application. These mock-ups helped to get a first feeling on the UI of the application and to communicate the first stage of the application.
-![Result page](../Diagrammen/mockup-result page.png "mockup result page")
+![Result page](../Diagrammen/mockup-result_page.png "mockup result page")
 
-![Login](../Diagrammen/CECLES-login mockup.png "Login Celces")
+![Login](../Diagrammen/CECLES-login_mockup.png "Login Celces")
 As can be seen in the remainder of this chapter, the actual design differs from this visual. This was indeed not the purpose of the mock-ups as we aimed for a good usability with proper functions instead of a focus on design.
 
 ## Information Flow
@@ -243,7 +242,7 @@ The [YouTube API](https://developers.google.com/youtube/v3/) enables the system 
 
 
 ### GoogleScholar
-Google Scholar does not have an API, but several alternatives (even unofficial API’s) can be found on the online. For example, a parser for the output of Google Scholar is available on [icir](http://www. icir.org/christian/scholar.html). This enables the system to retrieve relevant papers with the topics belonging to the course.
+Google Scholar does not have an API, but several alternatives (even unofficial API’s) can be found on the online. For example, a parser for the output of Google Scholar is available on [icir](http://www.icir.org/christian/scholar.html). This enables the system to retrieve relevant papers with the topics belonging to the course.
 
 The system will retrieve and compute all information as mentioned above on beforehand and save it in the database so it can be quickly searched through according to the extracted topics per course.
 
@@ -253,42 +252,42 @@ The system will retrieve and compute all information as mentioned above on befor
 
 ### Authentication
 
-![Home/Login](../VisualizationApp/0 home login SS.png "Login page")
+![Home/Login](../VisualizationApp/0_home_login_SS.png "Login page")
 
 The Authentication should be done by Oauth. In the working example the login is done with a sample login. When the Oauth login works, the student automatically sees the courses he or she is enrolled in and can directly search for extra content
 
 ### Welcome 
 
-![Home page](../VisualizationApp/6 Welkom screen SS.png "Welcome")
+![Home page](../VisualizationApp/6_Welkom_screen_SS.png "Welcome")
 
 After login already suggestions are made on courses, topic and relating sources. Also the user can scroll through his or her courses and search on topics.
 
 ### Course Information
 
-![Course Inormation](../VisualizationApp/1 Course info SS.png "Course information page")
+![Course Inormation](../VisualizationApp/1_Course_info_SS.png "Course information page")
 
 The course page contains the description and study goals extracted from the TU api. The keywords are then extracted from the course guide. For now the user has the possibility to rate the keywords as irrelevant. Further analysis can result in adding a positive rating as well
 
 ### Keywords
 
-![Keywords](../VisualizationApp/2 Keywords SS.png "Keywords section")
+![Keywords](../VisualizationApp/2_Keywords_SS.png "Keywords section")
 
-![Keywords interactive](../VisualizationApp/8 keywords SS.png "Keywords section")
+![Keywords interactive](../VisualizationApp/8_keywords_SS.png "Keywords section")
 The keywords are extracted from the courses as described in the system analysis. The keywords are graded by relevance as shown in the first screen shot (the relevance model is described in the system analysis chapter). The second screen shot shows the keywords as presented to the user in the application. 
 
 ### Search
 
-![Search example](../VisualizationApp/3 Search results Brownian motion SS.png "Search example")
+![Search example](../VisualizationApp/3_Search_results_Brownian_motion _SS.png "Search example")
 
-![Study materials](../VisualizationApp/4 Brownian motion - wi4202 SS.png "Study materials within course")
+![Study materials](../VisualizationApp/4_Brownian_motion-wi4202_SS.png "Study materials within course")
 
 When a student needs information on a particular topic, he or she can search directly on a keyword. All relevant courses and materials are shown.
 
 ### Results
 
-![Example wiki page](../VisualizationApp/5 WIKI brownian motion SS.png "Wikipedia page: result from a course")
+![Example wiki page](../VisualizationApp/5_WIKI_brownian_motion_SS.png "Wikipedia page: result from a course")
 
-![Example wiki page](../VisualizationApp/7 coursera SS.png "Wikipedia page: result from a course")
+![Example wiki page](../VisualizationApp/7_coursera_SS.png "Wikipedia page: result from a course")
 Students can consult different resources. From wikipedia for a quick explaination to a Coursera course for a profound exploration.
 
 ## Future work
@@ -346,7 +345,7 @@ Both the predefined queries and the asynchronous search operation save computati
 
 
 # Human Computation in CECLES
-This chapter is dedicated to the description of the human computation element in CECLES. A partial aim of the system is relevancy, which is a subjective term **[source]**. Therefore, human feedback is required in the system to provide measurements of the relevancy.
+This chapter is dedicated to the description of the human computation element in CECLES. A partial aim of the system is relevancy, which is a subjective term. Therefore, human feedback is required in the system to provide measurements of the relevancy.
 
 In CECLES, there are two measures of relevancy which require human computation: the relevancy of a keyword for a specific course and the relevancy of study material for a specific keyword. 
 
@@ -378,9 +377,9 @@ this question has the limitation of being very dependent on the course guide des
 
 
 ## Search result relevance
-After determining relevant keywords for the courses, these keywords are used to search for study material. The IR components of such retrieval is described in chapter **[verwijzing]**. However, not only accurate, but also relevant materials are required which, again, requires human computation.
+After determining relevant keywords for the courses, these keywords are used to search for study material. The IR components of such retrieval is described in chapter. However, not only accurate, but also relevant materials are required which, again, requires human computation.
 
-The search result relevance is given an initial value after which users can provide implicit and explicit user feedback **[reference to chapter 3]**. The explicit feedback is given by asking for a rating of the material (e.g. thumbs up- or down). The implicit feedback is given by tracking click- and bounce rates though the material.
+The search result relevance is given an initial value after which users can provide implicit and explicit user feedback. The explicit feedback is given by asking for a rating of the material (e.g. thumbs up- or down). The implicit feedback is given by tracking click- and bounce rates though the material.
 
 ## CrowdFlower task
 To show test the applicability of CrowdFlower as a tool for rating the keywords we have created a task in CrowdFlower for a few, randomly selected courses.
